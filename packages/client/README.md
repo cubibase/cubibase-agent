@@ -31,4 +31,14 @@ try {
 
 Every non-2xx response throws `CubiBaseError` with `status`, `code` (stable machine identifier), `requestId`, and `retryAfterSeconds`.
 
+## ControlClient surface
+
+- **Projects**: `listProjects`, `getProject`, `createProject`, `updateProject`, `deleteProject`, `provisioning`
+- **Schema**: `listTables`, `createTable`, `addColumn`, `dropColumn`, `setExposure`, `listPolicies`, `createPolicy`, `dropPolicy`
+- **Database objects**: `listDbTriggers`/`createDbTrigger`/`setDbTriggerEnabled`/`dropDbTrigger`, `listIndexes`/`createIndex`/`dropIndex`, `listTypes`/`createEnumType`/`createCompositeType`/`addTypeLabel`/`renameTypeLabel`/`dropType`, `listViews`/`createView`/`setViewApiAccess`/`refreshView`/`dropView`
+- **Rows & SQL** (console-grade sql role): `listRows`, `insertRow`, `updateRow`, `deleteRow`, `runSql` (read-only), `createSqlFunction`, `dropSqlFunction`
+- **Storage**: `listBuckets`/`createBucket`/`updateBucket`/`deleteBucket`, `listObjects`, `deleteObject`, `createUpload` (presigned S3 POST), `completeUpload`, `signObjectUrl`, `storageUsage`, and `uploadFile` — end-to-end upload (reserve → S3 POST → complete) for `Uint8Array`/string content
+- **Functions**: `listFunctions`/`getFunction`/`createFunction`/`updateFunction`/`deleteFunction`, `deployFunction`/`listDeployments`/`activateDeployment`, `setFunctionSecret`/`deleteFunctionSecret`, `createFunctionTrigger`/`updateFunctionTrigger`/`deleteFunctionTrigger`, `testFunction`, `functionExecutions`/`functionExecution`, `functionTemplates`, `functionsUsage`
+- **Platform**: `listApiKeys`/`createApiKey`/`revokeApiKey`, `requestLogs`, `auditLogs`, `usage`, `listAccessTokens`/`createAccessToken`/`revokeAccessToken`, `me`
+
 MIT © CubiBase

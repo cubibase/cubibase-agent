@@ -23,7 +23,7 @@ export interface HttpTransportOptions {
  */
 export class HttpTransport {
   private readonly baseUrl: string;
-  private readonly fetchImpl: typeof fetch;
+  readonly fetchImpl: typeof fetch;
   private token: string | undefined;
   private readonly defaultHeaders: Record<string, string>;
 

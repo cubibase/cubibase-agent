@@ -1,7 +1,7 @@
 {
   "name": "@cubibasehq/mcp",
-  "version": "0.1.1",
-  "description": "Model Context Protocol server for CubiBase: projects, schema, rows, SQL, logs, and Data API access for AI agents",
+  "version": "0.2.0",
+  "description": "Model Context Protocol server for CubiBase: projects, schema, storage, functions, rows, SQL, logs, docs search, and Data API access for AI agents",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
@@ -31,14 +31,14 @@
   },
   "homepage": "https://cubibase.com/docs/agents",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && node -e \"require('node:fs').copyFileSync('src/docs-corpus.json','dist/docs-corpus.json')\"",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
-    "@cubibasehq/client": "0.1.0",
+    "@cubibasehq/client": "0.2.0",
     "@modelcontextprotocol/sdk": "^1.32.0",
     "zod": "^3.24.0"
   }

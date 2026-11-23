@@ -5,8 +5,8 @@ Public monorepo for the CubiBase agent-facing packages. CubiBase is a PostgreSQL
 | Package | Purpose |
 | --- | --- |
 | [`@cubibasehq/client`](packages/client) | Typed TypeScript client for the Control API and project Data API. Structured errors with stable codes and `Retry-After`. |
-| [`@cubibasehq/mcp`](packages/mcp) | Model Context Protocol server (stdio) exposing projects, schema, rows, SQL, logs, and Data API tools. |
-| [`@cubibasehq/cli`](packages/cli) | `cubibase` CLI with JSON output, built for scripting and agents. |
+| [`@cubibasehq/mcp`](packages/mcp) | Model Context Protocol server (stdio) with 75 tools: projects, full schema (tables, columns, policies, triggers, indexes, types, views), rows, SQL, storage uploads and signed links, function deployments/secrets/triggers, logs, Data API, and offline docs search. Read-only mode (`CUBIBASE_READ_ONLY=1`) and feature groups (`CUBIBASE_FEATURES`). |
+| [`@cubibasehq/cli`](packages/cli) | `cubibase` CLI with JSON output and the same console parity, built for scripting and agents. |
 
 ## Agent skill
 
@@ -44,6 +44,8 @@ cubibase projects list
 cubibase tables list <projectId>
 cubibase rows list <projectId> notes --filter status=eq.active --limit 10
 cubibase sql <projectId> 'select count(*) from notes'
+cubibase storage upload <projectId> --bucket avatars --path u1.png --file ./u1.png
+cubibase functions deploy <projectId> hello
 ```
 
 ## Development
@@ -52,6 +54,8 @@ cubibase sql <projectId> 'select count(*) from notes'
 npm install
 npm run build
 npm test
+npm run lint
+node scripts/sync-docs.mjs   # refresh the bundled docs-search corpus from the website content
 ```
 
 Docs: <https://cubibase.com/docs> · Agent guide: <https://cubibase.com/docs/agents>

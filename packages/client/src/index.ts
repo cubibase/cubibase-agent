@@ -8,5 +8,10 @@ export {
   type ApiKey,
   type Table,
   type Column,
+  type ColumnInput,
+  type Bucket,
+  type UploadSession,
+  type CreateFunctionInput,
+  type UpdateFunctionInput,
 } from './control.js';
 export { DataClient, type DataClientOptions, type ListOptions } from './data.js';
