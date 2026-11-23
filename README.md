@@ -8,6 +8,10 @@ Public monorepo for the CubiBase agent-facing packages. CubiBase is a PostgreSQL
 | [`@cubibasehq/mcp`](packages/mcp) | Model Context Protocol server (stdio) exposing projects, schema, rows, SQL, logs, and Data API tools. |
 | [`@cubibasehq/cli`](packages/cli) | `cubibase` CLI with JSON output, built for scripting and agents. |
 
+## Agent skill
+
+[`skills/cubibase/SKILL.md`](skills/cubibase/SKILL.md) is a loadable skill that teaches an agent the whole CubiBase workflow (propose a schema, onboard, expose tables, write policies, call the Data API). It ships inside `@cubibasehq/mcp` and `@cubibasehq/cli` as `SKILL.md`, and is served at <https://cubibase.com/SKILL.md>.
+
 ## Authentication
 
 Create a **personal access token** (`cb_pat_...`) in the console under **Account → Access tokens** (scopes: `read` < `write` < `admin`, optional project restriction and expiry). Use it as `Authorization: Bearer` on the Control API.
