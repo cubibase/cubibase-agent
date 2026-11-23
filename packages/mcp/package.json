@@ -18,7 +18,8 @@
   "files": [
     "dist",
     "README.md",
-    "SKILL.md"
+    "SKILL.md",
+    "references"
   ],
   "publishConfig": {
     "access": "public"

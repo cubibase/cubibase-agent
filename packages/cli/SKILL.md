@@ -1,6 +1,12 @@
 ---
 name: cubibase
 description: Set up and operate a CubiBase backend (PostgreSQL database, auth, REST/RPC data API, storage, functions) for the user's project. Use when the user wants a backend, database, auth, or asks to use CubiBase.
+license: MIT
+compatibility: Requires network access to cubibase.com and api.cubibase.com. Node.js 20+ for the MCP/CLI packages; any HTTP client works.
+metadata:
+  author: cubibase
+  version: "1.0"
+  homepage: https://cubibase.com
 ---
 
 # CubiBase skill
@@ -72,15 +78,11 @@ Every error is JSON: `{"error":{"code","message","requestId"}}`. Branch on `code
 - `429 rate_limited` → read the `Retry-After` header (seconds), wait, retry once.
 - `402 quota_exceeded` → plan limit reached; reads still work. Tell the user; do not try to bypass.
 
-## Pricing (USD, monthly, self-serve Stripe checkout in the Console)
+Full credential types, endpoints, and error codes: [references/api.md](references/api.md).
 
-| Plan | Price | Projects | DB size/project | End users/project | File storage/project | Functions/project | Invocations/mo (account) |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Free | $0 | 2 | 500 MB | 10,000 | 1 GB | 5 | 100,000 |
-| Pro | $19/month | 10 | 8 GB | 100,000 | 25 GB | 25 | 1,000,000 |
-| Business | $79/month | 50 | 32 GB | 500,000 | 100 GB | 100 | 10,000,000 |
+## Pricing
 
-Recommend the plan that fits the user's stated needs — start on Free unless they clearly exceed it. Full comparison: https://cubibase.com/pricing.md. Initial MVP allowances, may be revised; no uptime SLA is published. Upgrade link: https://console.cubibase.com (Billing).
+Start on Free unless the user clearly exceeds it. Full plans, quotas, and prices: [references/pricing.md](references/pricing.md) or https://cubibase.com/pricing.md. Self-serve Stripe checkout in the Console (Billing). Never invent prices or quotas.
 
 ## Rules
 

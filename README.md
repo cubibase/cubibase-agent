@@ -10,7 +10,7 @@ Public monorepo for the CubiBase agent-facing packages. CubiBase is a PostgreSQL
 
 ## Agent skill
 
-[`skills/cubibase/SKILL.md`](skills/cubibase/SKILL.md) is a loadable skill that teaches an agent the whole CubiBase workflow (propose a schema, onboard, expose tables, write policies, call the Data API). It ships inside `@cubibasehq/mcp` and `@cubibasehq/cli` as `SKILL.md`, and is served at <https://cubibase.com/SKILL.md>.
+The canonical skill lives in **[github.com/cubibase/skills](https://github.com/cubibase/skills)** ([Agent Skills format](https://agentskills.io/specification.md)): `cubibase/SKILL.md` plus `references/` (pricing, API). The same skill ships inside `@cubibasehq/mcp` and `@cubibasehq/cli` as `SKILL.md`, and is served at <https://cubibase.com/SKILL.md>.
 
 ## Authentication
 
