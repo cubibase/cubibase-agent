@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { ControlClient, CubiBaseError } from '@cubibase/client';
+import { ControlClient, CubiBaseError } from '@cubibasehq/client';
 
 const HELP = `cubibase — CubiBase CLI (JSON output; built for humans and agents)
 

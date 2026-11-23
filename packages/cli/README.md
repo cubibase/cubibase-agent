@@ -1,9 +1,9 @@
-# @cubibase/cli
+# @cubibasehq/cli
 
 `cubibase` — command-line access to [CubiBase](https://cubibase.com) with JSON output, designed for scripting and AI agents.
 
 ```bash
-npm install -g @cubibase/cli
+npm install -g @cubibasehq/cli
 export CUBIBASE_TOKEN=cb_pat_...   # console → Account → Access tokens
 cubibase --help
 ```

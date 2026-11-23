@@ -1,6 +1,6 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
-import { ControlClient, DataClient, CubiBaseError } from '@cubibase/client';
+import { ControlClient, DataClient, CubiBaseError } from '@cubibasehq/client';
 
 export interface CubiBaseMcpOptions {
   /** Personal access token (cb_pat_...). Required. */

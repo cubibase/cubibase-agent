@@ -1,13 +1,13 @@
-# @cubibase/client
+# @cubibasehq/client
 
 Typed TypeScript client for the [CubiBase](https://cubibase.com) Control API and project Data API. Zero dependencies beyond `fetch` (Node 20+).
 
 ```bash
-npm install @cubibase/client
+npm install @cubibasehq/client
 ```
 
 ```ts
-import { ControlClient, DataClient, CubiBaseError } from '@cubibase/client';
+import { ControlClient, DataClient, CubiBaseError } from '@cubibasehq/client';
 
 const control = new ControlClient({ token: process.env.CUBIBASE_TOKEN });
 const { projects } = await control.listProjects();

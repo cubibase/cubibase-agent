@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'vitest';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
-import { CubiBaseError, ControlClient, DataClient, toCubiBaseError } from '@cubibase/client';
-import { createCubiBaseMcpServer } from '@cubibase/mcp';
+import { CubiBaseError, ControlClient, DataClient, toCubiBaseError } from '@cubibasehq/client';
+import { createCubiBaseMcpServer } from '@cubibasehq/mcp';
 import { InMemoryTransport } from '@modelcontextprotocol/sdk/inMemory.js';
 
 describe('client errors', () => {

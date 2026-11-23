@@ -4,11 +4,9 @@ Public monorepo for the CubiBase agent-facing packages. CubiBase is a PostgreSQL
 
 | Package | Purpose |
 | --- | --- |
-| [`@cubibase/client`](packages/client) | Typed TypeScript client for the Control API and project Data API. Structured errors with stable codes and `Retry-After`. |
-| [`@cubibase/mcp`](packages/mcp) | Model Context Protocol server (stdio) exposing projects, schema, rows, SQL, logs, and Data API tools. |
-| [`@cubibase/cli`](packages/cli) | `cubibase` CLI with JSON output, built for scripting and agents. |
-
-> **npm release pending.** The `@cubibase` packages are being published to npm. Until they appear in the registry, build from source (see [Development](#development)) and run `node packages/mcp/dist/stdio.js` (MCP) or `node packages/cli/dist/index.js` (CLI). The `npx` commands below work as soon as the packages are live.
+| [`@cubibasehq/client`](packages/client) | Typed TypeScript client for the Control API and project Data API. Structured errors with stable codes and `Retry-After`. |
+| [`@cubibasehq/mcp`](packages/mcp) | Model Context Protocol server (stdio) exposing projects, schema, rows, SQL, logs, and Data API tools. |
+| [`@cubibasehq/cli`](packages/cli) | `cubibase` CLI with JSON output, built for scripting and agents. |
 
 ## Authentication
 
@@ -23,7 +21,7 @@ For Data API access as a trusted server, create a **secret key** (`cb_sec_...`) 
   "mcpServers": {
     "cubibase": {
       "command": "npx",
-      "args": ["-y", "@cubibase/mcp"],
+      "args": ["-y", "@cubibasehq/mcp"],
       "env": {
         "CUBIBASE_TOKEN": "cb_pat_...",
         "CUBIBASE_SERVICE_KEY": "cb_sec_... (optional, enables Data API tools)"
@@ -36,7 +34,7 @@ For Data API access as a trusted server, create a **secret key** (`cb_sec_...`) 
 ## CLI quick start
 
 ```bash
-npm install -g @cubibase/cli
+npm install -g @cubibasehq/cli
 export CUBIBASE_TOKEN=cb_pat_...
 cubibase projects list
 cubibase tables list <projectId>

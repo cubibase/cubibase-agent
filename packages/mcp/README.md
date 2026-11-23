@@ -1,11 +1,11 @@
-# @cubibase/mcp
+# @cubibasehq/mcp
 
 Model Context Protocol server for [CubiBase](https://cubibase.com). Gives AI agents (Claude, Cursor, Codex, ...) direct access to projects, schema, rows, read-only SQL, logs, usage, and the project Data API.
 
 ## Install & run
 
 ```bash
-npx -y @cubibase/mcp
+npx -y @cubibasehq/mcp
 ```
 
 Configuration (environment):
@@ -23,7 +23,7 @@ Configuration (environment):
   "mcpServers": {
     "cubibase": {
       "command": "npx",
-      "args": ["-y", "@cubibase/mcp"],
+      "args": ["-y", "@cubibasehq/mcp"],
       "env": { "CUBIBASE_TOKEN": "cb_pat_..." }
     }
   }

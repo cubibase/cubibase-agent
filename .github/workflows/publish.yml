@@ -19,12 +19,12 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
-      - run: npm publish -w @cubibase/client --provenance --access public
+      - run: npm publish -w @cubibasehq/client --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm publish -w @cubibase/mcp --provenance --access public
+      - run: npm publish -w @cubibasehq/mcp --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: npm publish -w @cubibase/cli --provenance --access public
+      - run: npm publish -w @cubibasehq/cli --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
