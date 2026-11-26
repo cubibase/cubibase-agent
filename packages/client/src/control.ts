@@ -650,6 +650,31 @@ export class ControlClient {
     return this.req('/v1/usage');
   }
 
+  // ---- Billing: additional usage (V4.5, read-only) --------------------------
+  // Activation, deactivation and spending-limit changes are deliberately NOT
+  // exposed here: they are financial consent operations that belong to an
+  // organization owner/billing admin in the Console.
+
+  /** Public pricing catalog, including the additionalUsage overage rates. */
+  billingCatalog(): Promise<unknown> {
+    return this.req('/v1/billing/catalog');
+  }
+
+  /** Organization overage settings: enabled, spending limit, acceptance history. */
+  overageSettings(): Promise<unknown> {
+    return this.req('/v1/billing/overage/settings');
+  }
+
+  /** Per-resource usage, excess and estimated overage cost for the period. */
+  overageUsage(): Promise<unknown> {
+    return this.req('/v1/billing/overage/usage');
+  }
+
+  /** Estimated next invoice: fixed recurring charges vs variable usage estimates. */
+  overageInvoicePreview(): Promise<unknown> {
+    return this.req('/v1/billing/overage/invoice-preview');
+  }
+
   // ---- Access tokens (interactive session only) -----------------------------
 
   listAccessTokens(): Promise<{ tokens: AccessToken[] }> {

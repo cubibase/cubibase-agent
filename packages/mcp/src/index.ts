@@ -754,6 +754,17 @@ export function createCubiBaseMcpServer(options: CubiBaseMcpOptions): McpServer 
     inputSchema: {},
   }, async () => ok(await control.usage()));
 
+  tool('cubibase_additional_usage', 'observability', 'read', {
+    description:
+      'V4.5 additional usage (optional metered overages): organization settings (enabled, spending limit, acceptance), per-resource usage/excess/estimated cost, and the estimated next invoice. Read-only — enabling overages or changing spending limits is a financial consent action the organization owner must do in Console → Billing → Additional Usage. Overages are disabled by default and unavailable on Free.',
+    inputSchema: {},
+  }, async () =>
+    ok({
+      settings: await control.overageSettings(),
+      usage: await control.overageUsage(),
+      invoicePreview: await control.overageInvoicePreview(),
+    }));
+
   // ---- Docs search (offline) ------------------------------------------------------
 
   tool('cubibase_search_docs', 'docs', 'read', {

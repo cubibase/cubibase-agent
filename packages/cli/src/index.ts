@@ -87,6 +87,7 @@ Platform:
   logs requests <projectId> [--status N] [--error-code code] [--limit N]
   logs audit <projectId> [--action name] [--limit N]
   usage
+  additional-usage                  (read-only V4.5 overage settings, costs, invoice preview)
   tokens list                       (requires an interactive session JWT, not a PAT)
 
 Errors print JSON {"error":{code,message,status,retryAfterSeconds}} to stderr; exit code 1.
@@ -581,6 +582,15 @@ async function main(): Promise<void> {
       break;
     case 'usage':
       result = await client.usage();
+      break;
+    case 'additional-usage':
+      // V4.5 read-only overage view. Activation/spending-limit changes are
+      // financial consent actions — Console only (Billing → Additional Usage).
+      result = {
+        settings: await client.overageSettings(),
+        usage: await client.overageUsage(),
+        invoicePreview: await client.overageInvoicePreview(),
+      };
       break;
     case 'tokens list':
       result = await client.listAccessTokens();

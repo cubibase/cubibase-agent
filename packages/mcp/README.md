@@ -46,7 +46,7 @@ Read-only inspection agent (no writes are even advertised):
 }
 ```
 
-## Tools (75)
+## Tools (76)
 
 **Projects** — `cubibase_list_projects`, `cubibase_get_project`, `cubibase_create_project`, `cubibase_update_project`, `cubibase_delete_project`
 
@@ -58,7 +58,7 @@ Read-only inspection agent (no writes are even advertised):
 
 **Data API** (service key) — `cubibase_data_list`, `cubibase_data_rpc`, `cubibase_data_openapi`
 
-**Observability** — `cubibase_list_api_keys`, `cubibase_create_api_key`, `cubibase_revoke_api_key`, `cubibase_request_logs`, `cubibase_audit_logs`, `cubibase_usage`
+**Observability** — `cubibase_list_api_keys`, `cubibase_create_api_key`, `cubibase_revoke_api_key`, `cubibase_request_logs`, `cubibase_audit_logs`, `cubibase_usage`, `cubibase_additional_usage` (read-only V4.5 overage settings, per-resource costs, invoice preview)
 
 **Docs** — `cubibase_search_docs` (offline ranked search over the bundled cubibase.com documentation; returns excerpts + URLs, fetch `{url}.md` for full pages)
 

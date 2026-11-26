@@ -45,6 +45,7 @@ cubibase functions executions <projectId> --status error --limit 20
 cubibase keys create <projectId> --kind secret --name backend
 cubibase logs requests <projectId> --status 403 --limit 20
 cubibase usage
+cubibase additional-usage   # read-only V4.5 overage settings, costs, invoice preview
 ```
 
 Errors print `{"error":{code,message,status,retryAfterSeconds}}` to stderr and exit 1. On 429, wait `retryAfterSeconds` before retrying.

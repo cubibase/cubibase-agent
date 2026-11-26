@@ -5,7 +5,7 @@ Public monorepo for the CubiBase agent-facing packages. CubiBase is a PostgreSQL
 | Package | Purpose |
 | --- | --- |
 | [`@cubibasehq/client`](packages/client) | Typed TypeScript client for the Control API and project Data API. Structured errors with stable codes and `Retry-After`. |
-| [`@cubibasehq/mcp`](packages/mcp) | Model Context Protocol server (stdio) with 75 tools: projects, full schema (tables, columns, policies, triggers, indexes, types, views), rows, SQL, storage uploads and signed links, function deployments/secrets/triggers, logs, Data API, and offline docs search. Read-only mode (`CUBIBASE_READ_ONLY=1`) and feature groups (`CUBIBASE_FEATURES`). |
+| [`@cubibasehq/mcp`](packages/mcp) | Model Context Protocol server (stdio) with 76 tools: projects, full schema (tables, columns, policies, triggers, indexes, types, views), rows, SQL, storage uploads and signed links, function deployments/secrets/triggers, logs, Data API, and offline docs search. Read-only mode (`CUBIBASE_READ_ONLY=1`) and feature groups (`CUBIBASE_FEATURES`). |
 | [`@cubibasehq/cli`](packages/cli) | `cubibase` CLI with JSON output and the same console parity, built for scripting and agents. |
 
 ## Agent skill
