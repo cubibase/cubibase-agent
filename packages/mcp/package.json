@@ -1,6 +1,6 @@
 {
   "name": "@cubibasehq/mcp",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Model Context Protocol server for CubiBase: projects, schema, storage, functions, rows, SQL, logs, docs search, and Data API access for AI agents",
   "license": "MIT",
   "type": "module",
@@ -38,7 +38,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@cubibasehq/client": "0.2.1",
+    "@cubibasehq/client": "0.2.2",
     "@modelcontextprotocol/sdk": "^1.32.0",
     "zod": "^3.24.0"
   }
