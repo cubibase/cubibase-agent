@@ -1,7 +1,7 @@
 {
   "name": "@cubibasehq/cli",
-  "version": "0.2.0",
-  "description": "CubiBase CLI for developers and AI agents: projects, schema, rows, SQL, storage, functions, logs \u2014 JSON output by default",
+  "version": "0.2.1",
+  "description": "CubiBase CLI for developers and AI agents: projects, schema, rows, SQL, storage, functions, logs — JSON output by default",
   "license": "MIT",
   "type": "module",
   "bin": {
@@ -30,6 +30,6 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@cubibasehq/client": "0.2.0"
+    "@cubibasehq/client": "0.2.1"
   }
 }
